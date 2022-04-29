@@ -1,0 +1,136 @@
+@import "./colors";
+@import "./utilities";
+
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+body,
+#root {
+  height: 100%;
+}
+
+#main-layout {
+  display: flex;
+  height: 100vh;
+
+  .left,
+  .right {
+    padding-top: 38px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .left {
+    width: 340px;
+    flex-shrink: 0;
+    background-color: #3b1f6a;
+
+    .items {
+      margin-top: 34px;
+
+      .item {
+        border-radius: 10px;
+        background-color: #503280;
+        margin-bottom: 24px;
+        padding: 16px 14px;
+      }
+    }
+  }
+
+  .right {
+    flex-grow: 1;
+    background-color: #240e47;
+
+    .title {
+      padding: 0 8px;
+    }
+
+    .cards {
+      margin-top: 42px;
+
+      .card {
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #100029;
+        margin-bottom: 16px;
+
+        .number {
+          background: linear-gradient(
+            180deg,
+            #949494 9.23%,
+            #dedede 23.14%,
+            #dcdcdc 42.34%,
+            #c8c8c8 48.55%,
+            #ababab 66.14%,
+            #868686 107.53%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+
+        .stars-num {
+          color: #cdb2f9;
+        }
+
+        &.first {
+          background-color: #4001a6;
+
+          .number {
+            background: linear-gradient(
+              180deg,
+              #ffee00 9.23%,
+              #ffc80d 23.14%,
+              #ff682f 53.93%,
+              #ff4a39 62.87%,
+              #f44d6e 72.81%,
+              #d853f2 94.66%,
+              #d554ff 96.65%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+        }
+
+        &.second {
+          background-color: #2f0279;
+
+          .number {
+            background: linear-gradient(
+              180deg,
+              #d7a444 9.23%,
+              #e8bf5f 23.14%,
+              #f8d675 42.34%,
+              #f1cc6e 48.55%,
+              #ce9641 66.14%,
+              #bf7f30 107.53%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+        }
+
+        &.third {
+          background-color: #391a6c;
+        }
+
+        .number {
+          border-right: 1px solid rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+}
