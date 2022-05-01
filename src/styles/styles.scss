@@ -53,6 +53,10 @@ body,
     flex-shrink: 0;
     background-color: #3b1f6a;
 
+    @media screen and (max-width: 1200px) {
+      width: 270px;
+    }
+
     .items {
       margin-top: 34px;
 

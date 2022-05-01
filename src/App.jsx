@@ -117,46 +117,44 @@ function App() {
         <div className="cards">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-lg-6">
-                {cardsData.slice(0, cardsData.length / 2).map((el, idx) => {
-                  const { first, second, third, text, stars } = el;
+              {cardsData.slice(0, cardsData.length / 2).map((el, idx) => {
+                const { first, second, third, text, stars } = el;
 
-                  return (
-                    <div key={"card-" + idx}>
-                      <div className={clsx("card", { first, second, third })}>
-                        <div className="d-flex justify-content-between align-items-center">
-                          <div className="d-flex">
-                            <h3 className="number pe-3">{idx + 1}</h3>
+                return (
+                  <div className="col-lg-6" key={"card-" + idx}>
+                    <div className={clsx("card", { first, second, third })}>
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div className="d-flex">
+                          <h3 className="number pe-3">{idx + 1}</h3>
 
-                            <h4 className="ps-3">{text}</h4>
-                          </div>
-                          <div className="d-flex align-items-center">
-                            <h4 className="stars-num">{stars}</h4>
-                            <div className="star-wrap ms-3">
-                              {first ? (
-                                <img
-                                  src="/assets/vectors/star-dark.svg"
-                                  alt="star"
-                                />
-                              ) : second ? (
-                                <img
-                                  src="/assets/vectors/star-light.svg"
-                                  alt="star"
-                                />
-                              ) : (
-                                <img
-                                  src="/assets/vectors/star-white.svg"
-                                  alt="star"
-                                />
-                              )}
-                            </div>
+                          <h4 className="ps-3">{text}</h4>
+                        </div>
+                        <div className="d-flex align-items-center">
+                          <h4 className="stars-num">{stars}</h4>
+                          <div className="star-wrap ms-3">
+                            {first ? (
+                              <img
+                                src="/assets/vectors/star-dark.svg"
+                                alt="star"
+                              />
+                            ) : second ? (
+                              <img
+                                src="/assets/vectors/star-light.svg"
+                                alt="star"
+                              />
+                            ) : (
+                              <img
+                                src="/assets/vectors/star-white.svg"
+                                alt="star"
+                              />
+                            )}
                           </div>
                         </div>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
